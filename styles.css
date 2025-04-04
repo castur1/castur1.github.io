@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: crimson;
+}
+
+h1 {
+    font-size: large;
+}
+
+p {
+    font-size: medium;
+}
