@@ -1,17 +1,223 @@
+<!-- python -m http.server -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>castur_ portfolio website</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1> Hello World! :D </h1>
-        </header>
-        <main>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quae facilis ullam libero aliquam nam iure nobis </p>
-        </main>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>castur_ portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">castur<span>_</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>This portfolio is under construction</h1>
+                <p>How did you even manage to find this? You shouldn't be here</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Learn more about, uh, somebody else's skills, background, and what they do (everything here is a placeholder)</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Placeholder for profile image -->
+                </div>
+                <div class="about-text">
+                    <h3>Developer with a passion for performance</h3>
+                    <p>Hello! I'm Alex, a software developer with over 8 years of experience creating efficient C and C++ applications. I specialize in building high-performance systems, game engines, and desktop applications.</p>
+                    <p>With a background in computer science and a focus on low-level programming, I'm adept at optimizing code and solving complex technical challenges. I've worked on everything from real-time rendering engines to multi-threaded data processing applications.</p>
+                    <p>Currently, I'm expanding my skill set into web development to build comprehensive full-stack solutions.</p>
+                    
+                    <div class="skills">
+                        <span class="skill">C++</span>
+                        <span class="skill">C</span>
+                        <span class="skill">OpenGL</span>
+                        <span class="skill">DirectX</span>
+                        <span class="skill">Game Development</span>
+                        <span class="skill">Multi-threading</span>
+                        <span class="skill">Algorithm Design</span>
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p id="project-note">A selection of my recent work and personal projects</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Project image placeholder -->
+                    </div>
+                    <div class="project-info">
+                        <h3>Real-time Rendering Engine</h3>
+                        <p>A high-performance 3D rendering engine built with C++ and OpenGL, supporting PBR materials and advanced lighting.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">OpenGL</span>
+                            <span class="project-tag">GLSL</span>
+                            <span class="project-tag">3D Graphics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#">View Project</a>
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Project image placeholder -->
+                    </div>
+                    <div class="project-info">
+                        <h3>Data Processing Framework</h3>
+                        <p>A multi-threaded framework for processing large datasets with minimal memory footprint and optimal CPU utilization.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">Multi-threading</span>
+                            <span class="project-tag">Algorithms</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#">View Project</a>
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Project image placeholder -->
+                    </div>
+                    <div class="project-info">
+                        <h3>2D Physics Engine</h3>
+                        <p>A lightweight physics engine for 2D games, handling collision detection, rigid body dynamics and constraints.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C</span>
+                            <span class="project-tag">Game Physics</span>
+                            <span class="project-tag">Math</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#">View Project</a>
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Interested in working together? Send me a message</p>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Software developer specializing in C++ and desktop applications, with a growing interest in web technologies.</p>
+                    <div class="social-links">
+                        <a href="#">G</a>
+                        <a href="#">L</a>
+                        <a href="#">T</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: alex@example.com</p>
+                    <p>Location: San Francisco, CA</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Casper Turesson. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
