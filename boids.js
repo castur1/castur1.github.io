@@ -252,23 +252,24 @@ class Boid {
 
 let boids = [];
 const params = {
-    maxSpeed: 1.2,
-    desiredDist: 30,
-    seperationFactor: 1,
-    maxForce: 0.03,
-    radius: 50,
-    alignFactor: 0.7,
-    cohesionFactor: 0.1,
-    margin: 20,
-    maxForceBorders: 0.1,
+    maxSpeed: 4.5,
+    desiredDist: 35,
+    seperationFactor: 6,
+    maxForce: 0.2,
+    radius: 65,
+    alignFactor: 4,
+    cohesionFactor: 0.5,
+    margin: 50,
+    maxForceBorders: 0.5,
     size: 8,
     mouseRadius: 400,
-    mouseFactor: 0.1
+    mouseFactor: 2
 };
 let mousePos = {x: null, y: null};
 let isMouseDown = false;
 
 function InitBoids(count) {
+    boids.length = 0;
     for (let i = 0; i < count; ++i) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
@@ -321,7 +322,19 @@ canvas.addEventListener("mouseleave", () => {
     document.body.classList.remove('no-select');
 });
 
-function Render() {
+let lastTime;
+const frameTime = 1000 / 60;
+
+function Render(time) {
+    requestAnimationFrame(Render);
+
+    if (!lastTime) 
+        lastTime = time;
+    let elapsed = time - lastTime;
+
+    if (elapsed < frameTime) 
+        return;
+    
     context.fillStyle = "#1D1A05"
     context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -334,7 +347,16 @@ function Render() {
         boid.Draw(params)
     }
 
-    requestAnimationFrame(Render);
+    lastTime = time;
 }
 
 Render();
+
+document.getElementById('count').addEventListener('input', function() {
+    const count = parseInt(this.value);
+    document.getElementById('count-value').textContent = count;
+    InitBoids(count);
+
+    const percentage = 100 * (this.value - this.min) / (this.max - this.min);
+    this.style.background = 'linear-gradient(to right, #DC143C 0%, #DC143C ' + percentage + '%, #700A1D ' + percentage + '%, #700A1D 100%)';
+});

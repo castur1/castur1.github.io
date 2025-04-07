@@ -149,6 +149,33 @@ nav ul li a:hover {
     color: #DC143C;
 }
 
+.slider-container {
+    display: block;
+    position: absolute;
+    top: 95vh;
+    padding: 10px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 120px;
+    height: 6px;
+    vertical-align: middle;
+    border-radius: 6px;
+    outline: none;
+    background: linear-gradient(to right, #DC143C 0%, #DC143C 46%, #700A1D 46%, #700A1D 100%);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #DC143C; /* Blue thumb */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
 /* About Section */
 section {
     padding: 100px 0;
