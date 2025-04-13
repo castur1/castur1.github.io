@@ -216,6 +216,14 @@ section {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     background-color: #c8cbd2;
     margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image p {
+    color: #1D1A05;
 }
 
 .about-text {
@@ -233,6 +241,10 @@ section {
 .about-text p {
     margin-bottom: 15px;
     color: #c8cbd2;
+}
+
+.about-content p span {
+    color: #fb4066;
 }
 
 .skills {
