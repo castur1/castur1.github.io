@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <link rel="stylesheet" href="thank_you_styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Thank You!</h1>
+            <p>Your message has been prepared. Please click the button below to open it in your email client, and then simply send the message.</p>
+            <button id="openEmailButton">Open Email Client</button>
+        </div>
+    </div>
+
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mailtoLink = localStorage.getItem('mailtoLink');
+        const openEmailButton = document.getElementById('openEmailButton');
+  
+        if (mailtoLink) {
+          openEmailButton.addEventListener('click', function() {
+            openEmailButton.textContent = "Thank you! :D"
+            openEmailButton.disabled = true;
+            window.location.href = mailtoLink;
+          });
+          localStorage.removeItem('mailtoLink');
+        } else {
+          openEmailButton.textContent = "Something went wrong. Please try again.";
+          openEmailButton.disabled = true;
+        }
+      });
+    </script>
+</body>

@@ -83,6 +83,10 @@ nav ul li a:hover {
     color: #EA1F48;
 }
 
+.active {
+    text-decoration: underline;
+}
+
 #canvas {
     display: block;
     position: absolute;
