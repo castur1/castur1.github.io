@@ -11,8 +11,12 @@
 
     <script>
         var Module = {
-            canvas: document.getElementById("raylib_wasm_test_canvas")
+            canvas: document.getElementById("raylib_wasm_test_canvas"),
+
+            locateFile: function(path, prefix) {
+            return "demos/2048/" + path;
+        }
         };
     </script>
-    <script src="/demos/test/raylib_wasm_test.js"></script>
+    <script src="/demos/2048/2048.js"></script>
 </body>
