@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('subject').value;
-        const recipientEmail = 'Casperture@gmail.com';
+        const recipientEmail = 'castur.contact@gmail.com';
         const subject = encodeURIComponent('New message from your website');
         const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
